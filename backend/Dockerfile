@@ -1,10 +1,10 @@
 FROM node:20-alpine
 WORKDIR /usr/src/app
 
-COPY backend/package*.json ./
-RUN npm ci  # <-- DIGANTI DARI npm install
+COPY package*.json ./
+RUN npm install
 
-COPY backend/ .
+COPY . .
 
 EXPOSE 5000
 CMD [ "node", "server.js" ]
