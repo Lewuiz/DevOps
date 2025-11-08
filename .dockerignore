@@ -1,0 +1,35 @@
+# Dependencies (WAJIB diabaikan di root!)
+node_modules
+/frontend/node_modules
+/backend/node_modules
+
+# Build artifacts (Biasanya dibuat DI DALAM container, jadi abaikan yang lokal)
+/dist
+/build
+/out
+
+# System dan Editor Files
+.DS_Store
+.vscode
+.idea
+npm-debug.log*
+yarn-error.log
+.npm
+.cache
+
+# Docker Files (abaikan files yang digunakan untuk build & compose itu sendiri)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Environment Variables (Sangat penting untuk keamanan)
+.env
+.env.local
+.env.*.local
+
+# Git
+.git
+.gitignore
+
+# CI/CD (abaikan file konfigurasi GitHub Actions)
+.github
