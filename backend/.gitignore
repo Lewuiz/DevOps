@@ -1,0 +1,36 @@
+# Dependencies
+/node_modules
+
+# Logs
+/logs
+*.log
+npm-debug.log*
+yarn-error.log
+
+# Build/Runtime artifacts (File hasil kompilasi seperti TypeScript)
+/dist
+/out
+/build
+*.tsbuildinfo
+
+# Environment variables (Sangat penting diabaikan!)
+.env
+.env.development
+.env.production
+.env.local
+
+# Database/Uploads
+# Hapus atau edit baris ini jika Anda ingin menyimpan file upload
+/uploads
+/data/*.sqlite
+*.db
+
+# Editor/OS Files (VS Code, Mac OS, Windows)
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Jika menggunakan Docker, abaikan volume data dan image:
+# /docker-data
+# *.img
