@@ -8,7 +8,7 @@ const Header = () => {
         <h2>Order your favourite food here</h2>
         <p>
           Enjoy a diverse menu of expertly crafted dishes made with the finest
-          ingredients — designed to satisfy your cravings and elevate every
+          ingredients — designed specially to satisfy your cravings and elevate every
           meal.
         </p>
       </div>
