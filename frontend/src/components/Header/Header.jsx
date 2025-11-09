@@ -7,10 +7,9 @@ const Header = () => {
       <div className="header-contents">
         <h2>Order your favourite food here</h2>
         <p>
-          Choose from a diverse menu featuring a detectable array of dishes
-          crafted with the finest ingredients and culinary expertise. Our
-          mission is to satisfy your cravings and elevate your dining
-          experience, one delicious meal at a time.
+          Enjoy a diverse menu of expertly crafted dishes made with the finest
+          ingredients — designed to satisfy your cravings and elevate every
+          meal.
         </p>
       </div>
     </div>
