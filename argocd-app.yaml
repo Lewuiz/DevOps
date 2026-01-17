@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/QuizOnlineDevOps/deployment.git
+    repoURL: https://github.com/Lewuiz/DevOps.git
     targetRevision: HEAD
     path: dev
   destination:
