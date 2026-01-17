@@ -1,18 +1,20 @@
-apiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1 
 kind: Application
 metadata:
-  name: my-fullstack-app
+  name: devops-argocd
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/Lewuiz/DevOps_Class_Project.git'
+    repoURL: https://github.com/QuizOnlineDevOps/deployment.git
     targetRevision: HEAD
-    path: k8s
+    path: dev
   destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: default
+    server: https://kubernetes.default.svc
+    namespace: devops-argocd
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
     automated:
       prune: true
-      selfHeal: true
+      selfHeal: true   
