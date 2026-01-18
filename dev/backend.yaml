@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend-deployment
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: backend
@@ -12,33 +12,33 @@ spec:
       labels:
         app: backend
     spec:
-      dnsPolicy: "None"
+      dnsPolicy: 'None'
       dnsConfig:
         nameservers:
           - 8.8.8.8
           - 1.1.1.1
       containers:
-      - name: backend
-        image: louisl8/backend:latest
-        ports:
-        - containerPort: 5000
-        env:
-        - name: PORT
-          value: "5000"
-        - name: MONGO_URL
-          value: mongodb+srv://reduvia_8_user:eCPDx6wBaiAMaK0g@cluster0.ji1njb0.mongodb.net/
-        - name: JWT_SECRET
-          value: "adasjkofnasofnas"
-        - name: STRIPE_SECRET_KEY
-          value: "asdasdasdasd"
-        - name: SALT
-          value: "10"
-        - name: NODE_ENV
-          value: "production"
-        resources:
-          requests:
-            cpu: "100m"   
-            memory: "128Mi"
-          limits:
-            cpu: "500m"   
-            memory: "256Mi"
+        - name: backend
+          image: louisl8/backend:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: PORT
+              value: '5000'
+            - name: MONGO_URL
+              value: mongodb+srv://reduvia_8_user:eCPDx6wBaiAMaK0g@cluster0.ji1njb0.mongodb.net/
+            - name: JWT_SECRET
+              value: 'adasjkofnasofnas'
+            - name: STRIPE_SECRET_KEY
+              value: 'asdasdasdasd'
+            - name: SALT
+              value: '10'
+            - name: NODE_ENV
+              value: 'production'
+          resources:
+            requests:
+              cpu: '100m'
+              memory: '128Mi'
+            limits:
+              cpu: '500m'
+              memory: '256Mi'
